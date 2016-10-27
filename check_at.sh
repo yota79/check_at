@@ -59,7 +59,7 @@ done
                                         echo "Hostname : " $HOSTNAME >> "$PATH_REDHAT"/"$HOSTNAME"\_at.txt
                                         RPM=$(sshpass -p "$PASSWORD" ssh -t -o StrictHostKeyChecking=no $USER@$f "rpm -qa | grep ^at-[1-9].")
                                                 if [ -z "$RPM" ] ; then
-                                                echo "RPM AT INSTALLATO" >> "$PATH_REDHAT"/"$HOSTNAME"\_at.txt
+                                                echo "RPM AT INSTALLED" >> "$PATH_REDHAT"/"$HOSTNAME"\_at.txt
                                                 fi
                                         echo "       " >> "$PATH_REDHAT"/"$HOSTNAME"\_at.txt
                                         echo "------------" >> "$PATH_REDHAT"/"$HOSTNAME"\_at.txt
@@ -72,5 +72,5 @@ done
                 fi
 count=$((count+1))
 done
-echo "Numero Server controllati : " $count
+echo "Server Checked : " $count
 exit 0
